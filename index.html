@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sofia · Riattiva 90 Studio Privato</title>
+<meta name="description" content="Sofia: la tua assistente con intelligenza artificiale del Protocollo Riattiva 90, a qualsiasi ora per 90 giorni.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1877f2">
+<meta name="apple-mobile-web-app-title" content="Sofia">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="sofia.jpg">
+<link rel="icon" href="sofia.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="estilos.css?v=1">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marca">
+    <div class="avatar" id="avatar">
+      <img src="sofia.jpg" alt="" onerror="this.remove()">
+      <span class="iniciales">S</span>
+    </div>
+    <div class="marca-texto">
+      <h1>Sofia</h1>
+      <p>La tua assistente 24/7 · Riattiva 90</p>
+    </div>
+  </div>
+  <div class="acciones">
+    <div class="contador" id="contador" aria-live="polite"></div>
+    <button type="button" class="nuevo" id="nuevo" hidden>Nuova chat</button>
+  </div>
+</header>
+
+<main class="hilo" id="hilo" role="log" aria-live="polite" aria-label="Conversazione">
+
+  <section class="bienvenida" id="bienvenida">
+    <div class="avatar avatar-grande" aria-hidden="true">
+      <img src="sofia.jpg" alt="" onerror="this.remove()">
+      <span class="iniciales">S</span>
+    </div>
+    <p class="sello">RIATTIVA 90 STUDIO PRIVATO</p>
+    <h2>Ciao! Sono Sofia, la tua assistente del Riattiva 90.</h2>
+    <p class="bajada">
+      Ti preparo la mappa degli orari, le combinazioni giuste per ogni pasto e la regolazione
+      di ogni settimana. Per iniziare, raccontami età, peso e obiettivo, i tuoi orari,
+      in che fase sei, che farmaci prendi e com'è andata questa settimana.
+    </p>
+    <button type="button" class="seguir-ficha" id="seguir-ficha" hidden>
+      <strong>Riprendiamo da dove eravamo</strong>
+      <span id="ficha-vista"></span>
+    </button>
+    <div class="sugerencias">
+      <button class="sugerencia" type="button">Inizio oggi. Ho 58 anni, mi sveglio alle 6:30 e ceno alle 20:00. Prendo una pastiglia per la pressione. Come comincio?</button>
+      <button class="sugerencia" type="button">Da 10 giorni la bilancia non si muove. Cosa faccio?</button>
+      <button class="sugerencia" type="button">Sabato ho una pizza con le amiche e domenica il pranzo dai figli. Come mi organizzo?</button>
+      <button class="sugerencia" type="button">Il mio yogurt è venuto liquido. Cosa ho sbagliato?</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="pie">
+  <div class="adjunto" id="adjunto" hidden>
+    <img id="adjunto-img" alt="Foto da inviare">
+    <button type="button" id="quitar-foto" aria-label="Togli la foto">×</button>
+  </div>
+  <form class="compositor" id="compositor">
+    <button type="button" id="foto" class="boton-foto" aria-label="Aggiungi una foto">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+        <path d="M4 8h3l2-2.5h6L17 8h3v11H4z" fill="none" stroke="currentColor"
+              stroke-width="1.9" stroke-linejoin="round"/>
+        <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      </svg>
+    </button>
+    <input type="file" id="archivo" accept="image/*" hidden>
+    <textarea id="entrada" rows="1" placeholder="Scrivi a Sofia…"
+              enterkeyhint="send" autocomplete="off"
+              aria-label="Scrivi a Sofia"></textarea>
+    <button type="submit" id="enviar" aria-label="Invia">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor"
+              stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </form>
+  <p class="aviso">
+    Assistente con intelligenza artificiale. Può sbagliare e non sostituisce il tuo medico:
+    non cambiare né sospendere nessun farmaco senza parlarne con lui. Se non ti senti bene, fermati e consulta il medico.
+  </p>
+</div>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
